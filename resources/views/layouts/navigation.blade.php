@@ -1,7 +1,7 @@
-<nav class="h-[80px] px-[110px] py-[12px] flex items-center justify-between bg-[#FFFFFF]">
-    <div>
-        <a href="{{ route('dashboard') }}"><img src="{{ asset('imgs/FotoFoshi Logo.png') }}" alt="logo"
-                                                class="w-[135.22px] h-[21.53px]"></a>
+<nav class="h-[80px] px-6 md:px-[110px] py-[12px] flex items-center justify-between bg-[#FFFFFF]">
+    <div class="hidden md:inline-block">
+        <a href="{{ route('photos.index') }}"><img src="{{ asset('imgs/FotoFoshi Logo.png') }}" alt="logo"
+                                                   class="w-[135.22px] h-[21.53px]"></a>
     </div>
     <div class="flex items-center space-x-[15px]">
         <a href="{{ route('settings') }}">
@@ -10,7 +10,7 @@
                 <i class="fa-solid fa-gear text-[16px] font-black leading-[34px] text-[#94A3B8]"></i>
             </div>
         </a>
-        <a href=""
+        <a href="{{ route('photos.create') }}"
            class="w-[188px] h-[50px] flex justify-center gap-2.5 rounded-[14px] px-[17px] py-[8px] bg-[#FFC727] hover:bg-[#FFC107] transition-all duration-200">
             <i class="fa-solid fa-camera text-[16px] font-black leading-[34px] text-[#FFFFFF]">
             </i>
