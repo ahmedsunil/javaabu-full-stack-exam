@@ -25,7 +25,7 @@
                         <i class="fa-solid fa-user text-[16px] font-black leading-[34px] text-[#94A3B8] flex"></i>
                     </div>
                     <span
-                        class="w-[77px] h-[44px] text-[16px] leading-[22px] font-medium text-[#94A3B8]">Mohamed Ali</span>
+                        class="w-[77px] h-[44px] text-[16px] leading-[22px] font-medium text-[#94A3B8]">{{ auth()->user()->name }}</span>
                     <i class="fa-solid fa-chevron-down w-[12px] h-[22px] font-semibold text-[16px] leading-[22px] text-[#94A3B8]"></i>
                 </div>
                 <a x-show="open"
