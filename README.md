@@ -38,13 +38,13 @@ Server Requirements:
 3. Run Commands:
     - Execute the following commands in your terminal:
 
-      composer install
-      php artisan key:generate
-      php artisan migrate
-      php artisan db:seed
-      php artisan storage:link
-      npm install
-      npm run dev
+          composer install
+          php artisan key:generate
+          php artisan migrate
+          php artisan db:seed
+          php artisan storage:link
+          npm install
+          npm run dev
 
 ## Getting Started
 
