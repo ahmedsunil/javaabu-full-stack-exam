@@ -28,10 +28,11 @@
                         class="w-[77px] h-[44px] text-[16px] leading-[22px] font-medium text-[#94A3B8]">{{ auth()->user()->name }}</span>
                     <i class="fa-solid fa-chevron-down w-[12px] h-[22px] font-semibold text-[16px] leading-[22px] text-[#94A3B8]"></i>
                 </div>
-                <a x-show="open"
+                <a x-show="open" x-cloak
                    @click.away="open = false" href="#"
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                   class="absolute w-[179.14px] h-[59px] bg-[#FFFFFF] hover:bg-[#F7F7F7] transition-all duration-200 px-[30px] py-[20px] rounded-[10px] shadow-custom gap-[10px] flex justify-between  items-center">
+                   class="absolute w-[179.14px] h-[59px] bg-[#FFFFFF] hover:bg-[#F7F7F7] transition-all duration-200
+                px-[30px] py-[20px] rounded-[10px] shadow-custom gap-[10px] flex justify-between items-center">
                     <span class="font-medium leading-[19.36px] text-[#94A3B8]">Log Out</span><i
                         class="fa-solid fa-sign-out text-[#94A3B8]"></i></a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">

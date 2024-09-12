@@ -34,5 +34,7 @@ class DatabaseSeeder extends Seeder
             'api_key' => 'AHhdhjaHKLajeyuamAHhdhjaHKLajeyuamSDfsks2SDfsks2',
         ]);
 
+        $this->call(ImageSeeder::class);
+
     }
 }

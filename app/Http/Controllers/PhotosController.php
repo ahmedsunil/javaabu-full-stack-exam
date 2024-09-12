@@ -12,9 +12,18 @@ class PhotosController extends Controller
 {
     public function index()
     {
-        $photos = Photo::paginate();
+        $photos = Photo::orderBy('created_at', 'desc')->paginate(7);
+
+        if (request()->ajax()) {
+            return response()->json([
+                'photos' => view('photos.photos-ajax', compact('photos'))->render(),
+                'next_page' => $photos->currentPage() + 1,
+                'last_page' => $photos->lastPage(),
+            ]);
+        }
 
         return view('photos.index', compact('photos'));
+
     }
 
     public function create()

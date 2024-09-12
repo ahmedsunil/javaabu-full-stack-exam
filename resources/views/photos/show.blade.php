@@ -21,7 +21,8 @@
             </div>
 
             @can('delete', $photo)
-                <div class="mx-auto mb-[52.52px]" x-data="{ 'showModal': false }" @keydown.escape="showModal = false">
+                <div class="mx-auto mb-[52.52px]" x-cloak x-data="{ 'showModal': false }"
+                     @keydown.escape="showModal = false">
                     <button type="button" @click="showModal = true"
                             class="inline-flex justify-center items-center cursor-pointer bg-[#EEEEEF] text-[#CC3B3B] w-[302px] h-[50px] px-[25px] py-[16px] rounded-[25px] font-medium text-[16px] leading-[19.36px]">
                         Delete Photo

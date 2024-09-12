@@ -10,7 +10,7 @@ Route::get('/', function () {
 })->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
-    Route::get('/photos', [PhotosController::class, 'index'])->name('photos.index');
+    Route::get('/', [PhotosController::class, 'index'])->name('photos.index');
     Route::get('/photos/create', [PhotosController::class, 'create'])->name('photos.create');
     Route::post('/photos', [PhotosController::class, 'store'])->name('photos.store');
     Route::get('/photos/{photo}', [PhotosController::class, 'show'])->name('photos.show');
