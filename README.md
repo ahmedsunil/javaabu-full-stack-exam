@@ -24,34 +24,37 @@ Server Requirements:
 - Composer: For managing dependencies
 - Node v20 or later
 
-## How to Install and Run
+## Installation
 
-- Create a database named photofoshi or any name you like
-    - Make a copy of .env.example file and rename it to .env and change these values according to your localhost setup
+1. Clone the Repository:
+    - First, clone the repository to your local environment.
 
-          DB_DATABASE=fotofoshi
 
-          DB_USERNAME=root
+2. Setup Database:
+    - Create a new database.
+    - Update the .env file with your database credentials.
 
-          DB_PASSWORD=
 
-- now you can run
+3. Run Commands:
+    - Execute the following commands in your terminal:
 
       composer install
+      php artisan key:generate
+      php artisan migrate
+      php artisan db:seed
+      php artisan storage:link
+      npm install
+      npm run dev
 
-- when composer installation is over, then you can run
+## Getting Started
 
-        npm install
+To get started with FotoFoshi:
 
-- then run
+- Login Credentials:
 
-      php artisan migrate --seed 
+        Email: admin@example.com
+        Password: root
 
-- finally run the application by running
+## License
 
-        npm run dev
-
-## Credentials
-
-- User: admin@example.com
-- Password: root
+FotoFoshi is licensed under the MIT License.
